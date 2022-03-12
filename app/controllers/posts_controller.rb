@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy verify_owner]
   before_action :authenticate_user!, except: %i[show]
-  before_action :verify_owner, only: %i[ update destroy ]
+  before_action :verify_owner, only: %i[update destroy]
 
   # GET /posts or /posts.json
   def index
