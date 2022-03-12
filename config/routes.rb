@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   get '/u/:id', to: 'user#index', as: :user
   get '/u/:id/channel', to: 'user#channel', as: :user_channel
   get '/u/:id/saved', to: 'user#saved', as: :user_saved
